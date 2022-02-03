@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DeucaChain Blog</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/app.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav-bar">
+        <ul>
+          <li><a href="{{ url_for('main.index')}}">A propos</a></li>
+          <li><a href="{{ url_for('main.articles')}}">Articles</a></li>
+          <li><a href="{{ url_for('main.index',  _anchor='contact')}}">Me contacter</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <div class="home">
+      <ul>
+        <li>
+          <p>Welcome on my Blog</p>
+        </li>
+        <li><img id="etc" src="{{ url_for('static', filename='1200px-Ethereum_logo_2014.svg.png') }}"></li>
+        <li><img id="btc" src="{{ url_for('static',filename='Bitcoin.svg.png') }}"></li>
+      </ul>
+
+    </div>
+
+
+    <center>
+      <div id="about">
+        <h2>Qui suis-je ?</h2>
+        <p>
+          Bonjour à tous, je suis Deucalion un lycéen en terminal STI2D passionné
+          d’informatique, de finance et d’entrepreunariat. J’ai commencé à coder
+          mes premières lignes quand j’avais 14 ans et je me suis vite trouvé une
+          passion dans le code et la créativité qu’il apportait. J’apprends donc
+          à mon rythme depuis 4 ans bientôt en découvrant de nouvelles techno.
+          Il y a 1 an je me suis réellement intérressé à la blockchain et les cryptos.
+          J’ai tout de suite accroché et j’ai voulu allez comprendre comment tout cela
+          fonctionnait concrètement. J’ai donc découvert les smartcontracts, solidity
+          le fonctionnement des réseaux P2P etc...<br><br>
+
+          Je commence alors à investir moi même en crypto, je regarde les projets
+          que je juge pertinent et prometteur. Je commence également à apprendre
+          les bases du trading mais ce n’était pas la choses qui me passionne le plus.
+          Ce que je veux c’est comprendre, créer et pourquoi pas innover. Je lis plein
+          d’articles, je regardes plein de vidéo je suis assoiffée de connaissance sur
+          ce sujet. Je me suis donc dit que je pouvais les partager à travers mon propre
+          blog que voici. Je vous partagerais donc ici un tat de chose :<br><br>
+
+          Des tutoriels (Utilisation de plateforme ou même de devélopement)<br>
+          Des récap de l’actualité Blockchain / crypto et informatique (cyber sec)<br>
+          Mon avis sur certain projets et pourquoi pas des sujets que vous avez envie de voir ici.<br><br>
+
+
+          Pour les curieux qui souhaitent savoir les langages de programmation que
+          je pratique:<br>
+        <ul>
+          <li>Python (dev web, Flask, scripting, data science)<br></li>
+          <li>Solidity (smartcontract)<br></li>
+          <li>Javascript (react, ajax)<br><br></li>
+        </ul>
+        <p>Et les technos que j’envisage d’apprendre :<br></p>
+        <ul>
+          <li>Rust (dev solana, software)<br></li>
+          <li>Python pour l’IA<br></li>
+          <li>Notion de cyber sécurité<br><br></li>
+        </ul>
+        <p>Je pense avoir tout dit et j’espère que celà vous a convaincu de me suivre.
+          Si vous souhaitez me contacter cliquez ici.</p>
+        </p>
+      </div>
+
+
+      <div id="contact">
+        <h2>Me contacter</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="notification-message">
+          {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="form-style-2">
+          <form action="/sendmail" method="POST">
+            <label for="field1"><span>Name <span class="required">*</span></span><input type="text" class="input-field"
+                name="mail_name" value="" /></label>
+            <label for="field2"><span>Email <span class="required">*</span></span><input type="text" class="input-field"
+                name="email" value="" /></label>
+            <label for="field5"><span>Message <span class="required">*</span></span><textarea name="message_mail"
+                class="textarea-field"></textarea></label>
+
+            <label><span> </span><input type="submit" value="Submit" /></label>
+          </form>
+        </div>
+      </div>
+    </center>
+  </div>
+</body>
+
+</html>

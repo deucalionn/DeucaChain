@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <title>Flask Intro - login page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/app.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Please login</h1>
+    <br>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <small class="error">{{ messages[0] }}</small>
+    {% endif %}
+    {% endwith %}
+
+    <form action="/login" method="POST">
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Username
+            <input type="text" placeholder="Username" name="name" />
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Password
+            <input type="text" placeholder="Password" name="password" />
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Password
+            <input type="submit" value="Login" name="login" />
+          </label>
+        </div>
+      </div>
+
+    </form>
+
+    {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+  </div>
+</body>
+
+</html>

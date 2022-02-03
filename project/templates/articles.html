@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DeucaChain Blog</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/app.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="{{ url_for('main.index')}}">A propos</a></li>
+                    <li><a href="{{ url_for('main.articles')}}">Articles</a></li>
+                    <li><a href="{{ url_for('main.index',  _anchor='contact')}}">Me contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class=" viewArticle">
+            <div class="infobox">
+                <h1>Informatique</h1>
+                {%for i in range(0, lenInfo)%}
+                <div class="box">
+                    <a href="{{ url_for('main.printArticles', name=articleInfo[i].file_name)}}">
+                        <p id="art-title"><b>{{articleInfo[i].title}}</b></p>
+                        <p id="art-descr">{{articleInfo[i].description}}</p>
+                    </a>
+                </div>
+                {%endfor%}
+                {% if lenInfo == 0%}
+                <div class="box">
+                    <p id="art-title">Soon...</p>
+                    <p id="art-descr">Aucun article n'est disponible dans cette catégorie pour le moment.</p>
+                </div>
+                {%endif%}
+            </div>
+
+            <div class="blockchainbox">
+                <h1>Blockchain</h1>
+                {%for i in range(0, lenBlock)%}
+                <div class="box">
+                    <a href="{{ url_for('main.printArticles', name=articleBlock[i].file_name)}}">
+                        <p id="art-title">{{articleBlock[i].title}}</p>
+                        <p id="art-descr">{{articleBlock[i].description}}</p>
+                    </a>
+                </div>
+                {%endfor%}
+                {% if lenBlock == 0%}
+                <div class="box">
+                    <p id="art-title">Soon...</p>
+                    <p id="art-descr">Aucun article n'est disponible dans cette catégorie pour le moment.</p>
+                </div>
+                {%endif%}
+            </div>
+
+            <div class="Tutobox">
+                <h1>Tutoriel</h1>
+                {%for i in range(0, lenTuto)%}
+                <div class="box">
+                    <a href="{{ url_for('main.printArticles', name=articleTuto[i].file_name)}}">
+                        <p id="art-title">{{articleTuto[i].title}}</p>
+                        <p id="art-descr">{{articleTuto[i].description}}</p>
+                    </a>
+                </div>
+                {%endfor%}
+                {% if lenTuto == 0 %}
+                <div class="box">
+                    <p id="art-title">Soon...</p>
+                    <p id="art-descr">Aucun article n'est disponible dans cette catégorie pour le moment.</p>
+                </div>
+                {%endif%}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

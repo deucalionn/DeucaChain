@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0 !important;
+    background-color: #5E4962;
+}
+
+
+
+
+.menu {
+    background-color: white;
+    margin-top: 0;
+    padding: 0;
+    height: 80px;
+    width: 100%;
+}
+
+.menu ul li a {
+    color : black;
+    font-weight:bold;
+}

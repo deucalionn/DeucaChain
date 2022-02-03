@@ -1,0 +1,311 @@
+@import url('http://fonts.cdnfonts.com/css/mervale-script');
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #5E4962;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.container {
+    width: auto;
+    text-align: center;
+}
+
+
+
+.nav-bar ul{
+    margin-top: 30px;
+    list-style: none; /* enlever les puces */
+    margin: 0; /* enlever les marges automatiques */
+}
+
+.nav-bar li{
+    font-size: 20px;
+    margin: 5px;
+    display: inline; /* affichage en ligne */
+}
+
+
+.nav-bar ul li a {
+    color: white;
+}
+
+
+.home{
+    margin-top: 10%;
+}
+
+
+.home p{
+    font-size: 70px;
+    font-family: 'Mervale Script', sans-serif;
+    height: auto;
+    color:  white;
+}
+.home ul{
+    list-style: none; /* enlever les puces */
+    margin: 0; /* enlever les marges automatiques */
+}
+
+.home li{
+    color: white;
+    font-size: 17px;
+    margin: 5px;
+    display: inline; /* affichage en ligne */
+}
+
+
+.nav-bar ul li a {
+    text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+    color: #FF8500;
+}
+
+
+#btc {
+    width: 25%;
+    display: inline; /* affichage en ligne */
+    float: right;
+    margin-right: 5%;
+    margin-top: -20%;
+}
+
+#etc {
+    width: 17%;
+    float: left;
+    margin-left: 5%;
+    margin-top: -17%;
+}
+
+
+
+#about {
+    margin-top: 20%;
+    width: 40%;
+}
+
+
+#about p {
+    font-size: 20px;
+    font-family: 'Noticia Text';
+    height: auto;
+    text-align: left;
+    color:  white;
+}
+
+
+#about ul li {
+    font-size: 20px;
+    font-family: 'Noticia Text';
+    height: auto;
+    text-align: left;
+    color:  white;
+}
+
+
+#about h2 {
+    font-size: 30px;
+    text-align: left;
+    color: white;
+    font-family: 'Noticia Text';
+}
+
+
+
+
+
+#contact {
+    margin-top: 10%;
+    width: 40%;
+}
+
+ #contact h2 {
+    font-size: 30px;
+    text-align: left;
+    color: white;
+    font-family: 'Noticia Text';
+}
+
+
+
+
+
+
+
+/* contact section */
+
+
+.form-style-2{
+	max-width: 500px;
+	padding: 20px 12px 10px 20px;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-2-heading{
+	font-weight: bold;
+	font-style: italic;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 20px;
+	font-size: 20px;
+	padding-bottom: 3px;
+}
+.form-style-2 label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+
+.form-style-2 label > span{
+	width: 100px;
+    font-size: 18px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+    color: white;
+}
+.form-style-2 span.required{
+	color:red;
+}
+
+.form-style-2 input.input-field, .form-style-2 .select-field{
+	width: 48%;	
+}
+.form-style-2 input.input-field, 
+.form-style-2 .tel-number-field, 
+.form-style-2 .textarea-field, 
+ .form-style-2 .select-field{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px;
+	outline: none;
+    width: 75%;
+}
+.form-style-2 .input-field:focus, 
+.form-style-2 .tel-number-field:focus, 
+.form-style-2 .textarea-field:focus,  
+.form-style-2 .select-field:focus{
+	border: 1px solid black;
+    width: 75%;
+}
+.form-style-2 .textarea-field{
+	height:200px;
+	width: 75%;
+}
+.form-style-2 input[type=submit],
+.form-style-2 input[type=button]{
+    width: 100px;
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: #FF8500;
+	color: #fff;
+
+}
+.form-style-2 input[type=submit]:hover,
+.form-style-2 input[type=button]:hover{
+	background: #28479c;
+	color: black;
+}
+
+
+
+
+
+
+/*articles sessions*/
+
+
+.viewArticle{
+    margin-top: 8%;
+    display: inline-block;
+}
+
+
+.infobox{
+    width: 100%;
+    height: auto;
+}
+
+
+.box{
+    width: 380px;
+    height: 250px;
+    background-color: #292929;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 15px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.box #art-title{
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.box #art-descr {
+    font-size: 16px;
+    color: rgb(190, 190, 190);
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+
+
+label,
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    height: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+.notification-message {
+    color: white;
+    font-size: 20px;
+}

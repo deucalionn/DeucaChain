@@ -60,7 +60,7 @@ def uploader():
         description = request.form.get('description')
 
         f.save(os.path.join(
-            '/home/deucalion/Documents/Work/Documents/work_code/blog/project/static/articles', secure_filename(f.filename)))
+            '/project/static/articles', secure_filename(f.filename)))
         addArticleToDb(title, file_name, category, description)
         flash('Upload succesfully !')
         return redirect(url_for('main.profile'))

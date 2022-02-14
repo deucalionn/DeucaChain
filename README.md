@@ -1,2 +1,2 @@
 # DeucaChain
-code of the blog
+This is the back and front end code of my blog deucachain.fr 

@@ -52,7 +52,7 @@ def articles():
 def printArticles():
     source = request.args.get('name')
     readme_file = open(
-        "/home/deucalion/Documents/Work/Documents/work_code/blog/project/static/articles/"+source, "r")
+        "project/static/articles/"+source, "r")
     md_template_string = markdown.markdown(
         readme_file.read(), extensions=["fenced_code"]
     )
@@ -81,7 +81,7 @@ def sendMail():
         email = request.form.get('email')
         message = request.form.get('message_mail')
         msg = Message("Nouveau mail DeucaChain", sender=email,
-                      recipients=['lucasprochelles@gmail.com'])
+                      recipients=['myemail'])
         msg.body = "{} send to you : {} email : {}".format(
             name, message, email)
         mail.send(msg)
